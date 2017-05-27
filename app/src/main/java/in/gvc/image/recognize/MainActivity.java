@@ -63,6 +63,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Add permission for camera and let user grant the permission
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 200);
+
+            //Log.i(TAG,"reached here before permission");
+
+            return;
+        }
+
         setContentView(in.gvc.image.recognize.R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(in.gvc.image.recognize.R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -164,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            //SendMail.SendSimpleMessage(bytes);
+            SendMail.SendSimpleMessage(bytes);
         }
         catch (Exception e)
         {
@@ -189,12 +199,12 @@ public class MainActivity extends AppCompatActivity {
                     parseit(temp_array,"words");
                 else if(key.equals("words")) {
                     TextView textView = (TextView) findViewById(in.gvc.image.recognize.R.id.textView);
-                    textView.setText(textView.getText()+"\n");
                     for(int j=0;j<temp_array.length();j++)
                     {
                         JSONObject obj1 = new JSONObject(temp_array.get(j).toString());
                         textView.setText(textView.getText()+obj1.getString("text")+" ");
                     }
+                    textView.setText(textView.getText()+"\n");
                 }
             }
         }
@@ -211,9 +221,12 @@ public class MainActivity extends AppCompatActivity {
             StreamConfigurationMap map = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
             assert map != null;
             imageDimension = map.getOutputSizes(SurfaceTexture.class)[0];
-            // Add permission for camera and let user grant the permission
+
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 200);
+                //ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 200);
+
+                //Log.i(TAG,"reached here before permission");
+
                 return;
             }
             manager.openCamera(cameraId, stateCallback, null);
@@ -287,10 +300,10 @@ public class MainActivity extends AppCompatActivity {
     }
     static SparseIntArray ORIENTATIONS = new SparseIntArray();
     static {
-        ORIENTATIONS.append(Surface.ROTATION_0, 0);
-        ORIENTATIONS.append(Surface.ROTATION_90, 90);
-        ORIENTATIONS.append(Surface.ROTATION_180, 180);
-        ORIENTATIONS.append(Surface.ROTATION_270, 270);
+        ORIENTATIONS.append(Surface.ROTATION_0, 90);
+        ORIENTATIONS.append(Surface.ROTATION_90, 0);
+        ORIENTATIONS.append(Surface.ROTATION_180, 270);
+        ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
     public void click_image(View view)
     {
@@ -300,12 +313,18 @@ public class MainActivity extends AppCompatActivity {
     {
         createCameraPreview();
     }
+
+
     protected void takePicture() {
         if(null == cameraDevice) {
             Log.e(TAG, "cameraDevice is null");
             return;
         }
         CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
+
+
+        TextView textView = (TextView)findViewById(R.id.textView);
+        textView.setText("Please Wait .....");
         try {
             CameraCharacteristics characteristics = manager.getCameraCharacteristics(cameraDevice.getId());
             Size[] jpegSizes = null;
