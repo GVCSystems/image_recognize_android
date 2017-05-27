@@ -163,6 +163,8 @@ public class MainActivity extends AppCompatActivity {
                 //textView.setText(textView.getText()+"\n");
 
             }
+
+            //SendMail.SendSimpleMessage(bytes);
         }
         catch (Exception e)
         {
