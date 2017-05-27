@@ -1,0 +1,111 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.CAMERA
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:6:5-65
+	android:name
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:6:22-62
+uses-feature#android.hardware.camera2.full
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:7:5-66
+	android:name
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:7:19-63
+application
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:8:5-25:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/arpit/.android/build-cache/631b366a2c06b43cd11d49ab2852d9280f452c7d/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] /home/arpit/.android/build-cache/038bc1cf5b763f1fdd8693542cd81656be286d1d/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/arpit/.android/build-cache/f3e55049910d568312c584df1fee3117bb4bbd5d/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/arpit/.android/build-cache/a0db51fec57810febc676fad7dc6949aca95778c/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/arpit/.android/build-cache/273db12ca8487f9bc059ceb0cc22bb0f750485e5/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] /home/arpit/.android/build-cache/9987878396520f235f0726be7d7296c943156962/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /home/arpit/.android/build-cache/4c8e731b246b6eb851ff4e2585aa1b1129cf80cf/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /home/arpit/.android/build-cache/c9373d4950e6dfe523fe80b2a65d1612a6004cb6/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/arpit/.android/build-cache/5af0c275ff9b8730bba02cd1e71c95e953edd68d/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/arpit/.android/build-cache/b1a206fc3089fd7f263dd5205cbb89920cafb6af/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/arpit/.android/build-cache/ce12b4007c88a66e63f86a39dbdf433d73d5c3c5/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /home/arpit/.android/build-cache/97fada9c17a97dfafc48150a4ce833ad3da7524f/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:11:9-41
+	android:supportsRtl
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:13:9-35
+	android:roundIcon
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:12:9-54
+	android:allowBackup
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:9:9-35
+	android:icon
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:10:9-43
+	android:theme
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:14:9-40
+activity#in.gvc.image.recognize.MainActivity
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:15:9-24:20
+	android:label
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:17:13-45
+	android:theme
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:18:13-56
+	android:name
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:16:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml:22:27-74
+uses-sdk
+INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/arpit/.android/build-cache/631b366a2c06b43cd11d49ab2852d9280f452c7d/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] /home/arpit/.android/build-cache/038bc1cf5b763f1fdd8693542cd81656be286d1d/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/arpit/.android/build-cache/f3e55049910d568312c584df1fee3117bb4bbd5d/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/arpit/.android/build-cache/a0db51fec57810febc676fad7dc6949aca95778c/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/arpit/.android/build-cache/273db12ca8487f9bc059ceb0cc22bb0f750485e5/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/arpit/.android/build-cache/78d86acfe0b456514a0a3120e805db2e295cc29b/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /home/arpit/.android/build-cache/9987878396520f235f0726be7d7296c943156962/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] /home/arpit/.android/build-cache/4c8e731b246b6eb851ff4e2585aa1b1129cf80cf/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /home/arpit/.android/build-cache/c9373d4950e6dfe523fe80b2a65d1612a6004cb6/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/arpit/.android/build-cache/5af0c275ff9b8730bba02cd1e71c95e953edd68d/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/arpit/.android/build-cache/b1a206fc3089fd7f263dd5205cbb89920cafb6af/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/arpit/.android/build-cache/ce12b4007c88a66e63f86a39dbdf433d73d5c3c5/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /home/arpit/.android/build-cache/97fada9c17a97dfafc48150a4ce833ad3da7524f/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] /home/arpit/.android/build-cache/038bc1cf5b763f1fdd8693542cd81656be286d1d/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+		INJECTED from /home/arpit/Desktop/ImageRecognize/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] /home/arpit/.android/build-cache/038bc1cf5b763f1fdd8693542cd81656be286d1d/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /home/arpit/.android/build-cache/f3e55049910d568312c584df1fee3117bb4bbd5d/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /home/arpit/.android/build-cache/a0db51fec57810febc676fad7dc6949aca95778c/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /home/arpit/.android/build-cache/273db12ca8487f9bc059ceb0cc22bb0f750485e5/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /home/arpit/.android/build-cache/78d86acfe0b456514a0a3120e805db2e295cc29b/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /home/arpit/.android/build-cache/9987878396520f235f0726be7d7296c943156962/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /home/arpit/.android/build-cache/4c8e731b246b6eb851ff4e2585aa1b1129cf80cf/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /home/arpit/.android/build-cache/c9373d4950e6dfe523fe80b2a65d1612a6004cb6/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /home/arpit/.android/build-cache/5af0c275ff9b8730bba02cd1e71c95e953edd68d/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /home/arpit/.android/build-cache/b1a206fc3089fd7f263dd5205cbb89920cafb6af/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /home/arpit/.android/build-cache/ce12b4007c88a66e63f86a39dbdf433d73d5c3c5/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /home/arpit/.android/build-cache/97fada9c17a97dfafc48150a4ce833ad3da7524f/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] /home/arpit/.android/build-cache/038bc1cf5b763f1fdd8693542cd81656be286d1d/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] /home/arpit/.android/build-cache/038bc1cf5b763f1fdd8693542cd81656be286d1d/output/AndroidManifest.xml:26:9-47
