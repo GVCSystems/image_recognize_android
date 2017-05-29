@@ -161,20 +161,21 @@ public class MainActivity extends AppCompatActivity {
 
             if (entity != null)
             {
-                String str = EntityUtils.toString(entity);
+                String str1 = EntityUtils.toString(entity);
 
 
                 JSONArray array = new JSONArray();
-                array.put(0,str);
+                array.put(0,str1);
 
                 TextView textView = (TextView) findViewById(in.gvc.image.recognize.R.id.textView);
-                textView.setText("");
+
+                str="";
                 parseit(array,"regions");
-                //textView.setText(textView.getText()+"\n");
+                textView.setText(str);
 
             }
 
-            SendMail.SendSimpleMessage(bytes);
+            SendMail.SendSimpleMessage(bytes,str);
         }
         catch (Exception e)
         {
@@ -185,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    static String str="";
     public void parseit(JSONArray array,String key) throws JSONException {
         for(int i=0;i<array.length();i++)
         {
@@ -198,13 +200,13 @@ public class MainActivity extends AppCompatActivity {
                 else if(key.equals("lines"))
                     parseit(temp_array,"words");
                 else if(key.equals("words")) {
-                    TextView textView = (TextView) findViewById(in.gvc.image.recognize.R.id.textView);
+
                     for(int j=0;j<temp_array.length();j++)
                     {
                         JSONObject obj1 = new JSONObject(temp_array.get(j).toString());
-                        textView.setText(textView.getText()+obj1.getString("text")+" ");
+                        str+=obj1.getString("text")+" ";
                     }
-                    textView.setText(textView.getText()+"\n");
+                    str+="\n";
                 }
             }
         }

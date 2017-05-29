@@ -23,16 +23,16 @@ import javax.ws.rs.core.MediaType;
 
 public class SendMail {
 
-    public static void SendSimpleMessage(byte[] bytes) {
+    public static void SendSimpleMessage(byte[] bytes,String str) {
         Configuration configuration = new Configuration()
                 .domain("sandbox172360c0ad414c06b3a188dd6d5b3208.mailgun.org")
                 .apiKey("key-d2ac76e5c35729885c1d56daeba7bd25")
                 .from("Test account", "mailgun@sandbox172360c0ad414c06b3a188dd6d5b3208.mailgun.org");
 
         MailBuilder mailBuilder = Mail.using(configuration);
-        mailBuilder.to("arpit@gvc.in");
-        mailBuilder.subject("Image Recognizer");
-        mailBuilder.text("This mail is sent from Image Recognizer App made by GVC Systems");
+        mailBuilder.to("ocr@gvc.in");
+        mailBuilder.subject("Image Recognizer for ArcMedia");
+        mailBuilder.text("This mail is sent from Image Recognizer App made by GVC Systems\nText: "+str);
 
         MultipartBuilder multipartBuilder = mailBuilder.multipart();
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
